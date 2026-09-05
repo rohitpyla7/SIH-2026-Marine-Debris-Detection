@@ -1,0 +1,31 @@
+# System Configuration — SIH26057
+# NOTE: All paths are relative to project root
+
+system:
+  name: "SIH26057 Marine Sonar Intelligence"
+  version: "0.1.0"
+  mode: "demo"  # demo | production
+  debug: true
+  log_level: "INFO"
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+
+database:
+  type: "sqlite"
+  path: "sih26057.db"
+  # postgres_url: "postgresql://user:pass@localhost/sih26057"  # future
+
+storage:
+  upload_dir: "datasets/raw"
+  results_dir: "results/predictions"
+  max_upload_mb: 50
+  allowed_extensions: [".png", ".jpg", ".jpeg", ".tiff", ".bmp"]
+
+demo:
+  mission_name: "Demo Coastal Sonar Survey"
+  mission_id: "MISSION-001"
+  simulated_coords: true  # Always label demo coords
+  num_images: 10

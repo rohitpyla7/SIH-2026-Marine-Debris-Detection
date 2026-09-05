@@ -1,0 +1,37 @@
+# Anomaly Detection Configuration
+
+autoencoder:
+  architecture: "conv_ae"
+  input_size: [64, 64]
+  latent_dim: 32
+  encoder_channels: [16, 32, 64]
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 50
+  reconstruction_threshold: 0.65  # Error above this = anomaly
+
+isolation_forest:
+  n_estimators: 100
+  contamination: 0.05  # Expected fraction of anomalies
+  feature_extractor: "histogram"  # histogram | gradient | wavelet
+
+combined:
+  ae_weight: 0.6
+  if_weight: 0.4
+
+baseline:
+  # Prototype baseline using image statistics when no trained model available
+  method: "statistical"  # Used in DEMO MODE
+  features:
+    - mean_intensity
+    - std_intensity
+    - local_contrast
+    - texture_energy
+    - edge_density
+  threshold: 0.60
+
+# Score interpretation
+score_description: >
+  Anomaly score [0.0 - 1.0]. Higher = more anomalous.
+  In DEMO MODE this is computed from image statistics, NOT a trained model.
+  A trained autoencoder model should replace this for production.

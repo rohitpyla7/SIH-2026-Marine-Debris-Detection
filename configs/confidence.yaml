@@ -1,0 +1,21 @@
+# Confidence Fusion Configuration
+# Weights define how each signal contributes to the final Evidence Score.
+# IMPORTANT: This is an engineering evidence score, NOT a scientific accuracy measurement.
+# Weights must sum to 1.0
+
+fusion:
+  detector_weight: 0.45      # YOLO / detection model confidence
+  shadow_weight: 0.20        # Acoustic shadow consistency score
+  texture_weight: 0.15       # Texture analysis consistency
+  shape_weight: 0.10         # Shape geometry consistency
+  anomaly_weight: 0.10       # Inverted anomaly score (1 - anomaly_score for known objects)
+
+  # Minimum evidence score to auto-accept a detection
+  auto_accept_threshold: 0.80
+
+  # Below this score, flag for human review
+  human_review_threshold: 0.50
+
+  # Labels used in outputs
+  score_label: "Evidence Score (Engineering)"
+  score_description: "Weighted combination of detector confidence, shadow consistency, texture, shape, and anomaly analysis. Not a scientifically calibrated accuracy metric."

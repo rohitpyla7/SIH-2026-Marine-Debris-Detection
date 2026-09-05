@@ -1,0 +1,38 @@
+# Preprocessing Pipeline Configuration
+
+pipeline:
+  steps:
+    - name: grayscale
+      enabled: true
+      description: "Convert to grayscale if not already"
+    - name: normalize
+      enabled: true
+      description: "Normalize pixel intensity to 0-255"
+    - name: clahe
+      enabled: true
+      clip_limit: 2.0
+      tile_grid_size: [8, 8]
+      description: "Contrast Limited Adaptive Histogram Equalization"
+    - name: denoise
+      enabled: true
+      method: "gaussian"  # gaussian | median | bilateral
+      kernel_size: 3
+      description: "Reduce sonar speckle noise"
+    - name: sharpen
+      enabled: true
+      strength: 0.5
+      description: "Edge sharpening for object detection"
+    - name: background_normalize
+      enabled: true
+      description: "Normalize background seabed intensity variation"
+
+quality_assessment:
+  blur_threshold: 100.0      # Laplacian variance below this = blurry
+  contrast_threshold: 30.0   # Std deviation below this = low contrast
+  noise_threshold: 25.0      # Noise estimate above this = noisy
+  min_dynamic_range: 50      # Pixel range below this = poor dynamic range
+
+output:
+  preserve_original: true
+  save_intermediate: true
+  intermediate_dir: "results/predictions"

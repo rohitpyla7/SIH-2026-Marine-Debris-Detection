@@ -1,0 +1,476 @@
+{
+  "mission_id": "MISSION-001",
+  "name": "Demo Coastal Sonar Survey",
+  "date": "2026-08-31",
+  "area": "Demo Survey Area (SIMULATED)",
+  "survey_lat_center": 10.853,
+  "survey_lon_center": 76.275,
+  "vehicle": "DEMO-AUV-001 (SIMULATED)",
+  "sonar_config": "Demo Side-Scan Sonar (SIMULATED)",
+  "operator": "SIH26057 Demo System",
+  "status": "completed",
+  "data_label": "SYNTHETIC_DEMO",
+  "coordinates_label": "DEMO / SIMULATED LOCATION",
+  "images": [
+    {
+      "image_id": "IMG-001",
+      "filename": "IMG-001_normal_seabed.png",
+      "filepath": "data\\demo\\IMG-001_normal_seabed.png",
+      "scenario_type": "normal_seabed",
+      "description": "Normal seabed backscatter \u2014 no debris detected",
+      "image_quality": "GOOD",
+      "annotations": [],
+      "lat": 10.8505,
+      "lon": 76.2711,
+      "depth_m": 15.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-002",
+      "filename": "IMG-002_fishing_net.png",
+      "filepath": "data\\demo\\IMG-002_fishing_net.png",
+      "scenario_type": "fishing_net",
+      "description": "Fishing net debris \u2014 irregular bright return with clear shadow",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "fishing_net",
+          "bbox": [
+            521,
+            182,
+            658,
+            328
+          ],
+          "shadow_bbox": [
+            680,
+            196,
+            760,
+            316
+          ],
+          "center": [
+            600,
+            256
+          ],
+          "shape": "net"
+        }
+      ],
+      "lat": 10.851,
+      "lon": 76.272,
+      "depth_m": 15.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-003",
+      "filename": "IMG-003_metal_debris.png",
+      "filepath": "data\\demo\\IMG-003_metal_debris.png",
+      "scenario_type": "metal_debris",
+      "description": "Metal debris \u2014 high-intensity return with strong shadow",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "metal_debris",
+          "bbox": [
+            620,
+            170,
+            680,
+            230
+          ],
+          "shadow_bbox": [
+            680,
+            153,
+            750,
+            247
+          ],
+          "center": [
+            650,
+            200
+          ],
+          "shape": "ellipse"
+        },
+        {
+          "label": "metal_debris",
+          "bbox": [
+            730,
+            300,
+            770,
+            340
+          ],
+          "shadow_bbox": [
+            770,
+            288,
+            820,
+            352
+          ],
+          "center": [
+            750,
+            320
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.8515,
+      "lon": 76.273,
+      "depth_m": 16.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-004",
+      "filename": "IMG-004_plastic_debris.png",
+      "filepath": "data\\demo\\IMG-004_plastic_debris.png",
+      "scenario_type": "plastic_debris",
+      "description": "Plastic debris \u2014 moderate-intensity return",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "plastic_debris",
+          "bbox": [
+            535,
+            260,
+            625,
+            300
+          ],
+          "shadow_bbox": [
+            625,
+            249,
+            670,
+            311
+          ],
+          "center": [
+            580,
+            280
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.852,
+      "lon": 76.274,
+      "depth_m": 16.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-005",
+      "filename": "IMG-005_large_structure.png",
+      "filepath": "data\\demo\\IMG-005_large_structure.png",
+      "scenario_type": "large_structure",
+      "description": "Large artificial structure / shipwreck \u2014 very strong return and shadow",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "shipwreck",
+          "bbox": [
+            510,
+            196,
+            730,
+            316
+          ],
+          "shadow_bbox": [
+            730,
+            159,
+            880,
+            353
+          ],
+          "center": [
+            620,
+            256
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.8525,
+      "lon": 76.275,
+      "depth_m": 17.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-006",
+      "filename": "IMG-006_unknown_anomaly.png",
+      "filepath": "data\\demo\\IMG-006_unknown_anomaly.png",
+      "scenario_type": "unknown_anomaly",
+      "description": "Unknown anomaly \u2014 unusual shape and intensity pattern",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "unknown_anomaly",
+          "bbox": [
+            637,
+            213,
+            723,
+            299
+          ],
+          "shadow_bbox": [
+            707,
+            186,
+            767,
+            326
+          ],
+          "center": [
+            680,
+            256
+          ],
+          "shape": "ellipse"
+        }
+      ],
+      "lat": 10.853,
+      "lon": 76.276,
+      "depth_m": 17.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-007",
+      "filename": "IMG-007_low_quality.png",
+      "filepath": "data\\demo\\IMG-007_low_quality.png",
+      "scenario_type": "low_quality",
+      "description": "Low quality sonar image \u2014 heavy noise, reduced confidence",
+      "image_quality": "POOR",
+      "annotations": [
+        {
+          "label": "metal_debris",
+          "bbox": [
+            565,
+            231,
+            635,
+            281
+          ],
+          "shadow_bbox": [
+            635,
+            219,
+            685,
+            293
+          ],
+          "center": [
+            600,
+            256
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.8535,
+      "lon": 76.277,
+      "depth_m": 18.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-008",
+      "filename": "IMG-008_multi_object.png",
+      "filepath": "data\\demo\\IMG-008_multi_object.png",
+      "scenario_type": "multi_object",
+      "description": "Multiple objects \u2014 fishing net, metal debris, plastic debris",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "fishing_net",
+          "bbox": [
+            470,
+            147,
+            530,
+            219
+          ],
+          "shadow_bbox": [
+            400,
+            140,
+            460,
+            220
+          ],
+          "center": [
+            500,
+            180
+          ],
+          "shape": "net"
+        },
+        {
+          "label": "metal_debris",
+          "bbox": [
+            675,
+            275,
+            725,
+            325
+          ],
+          "shadow_bbox": [
+            725,
+            262,
+            780,
+            338
+          ],
+          "center": [
+            700,
+            300
+          ],
+          "shape": "ellipse"
+        },
+        {
+          "label": "plastic_debris",
+          "bbox": [
+            800,
+            185,
+            840,
+            215
+          ],
+          "shadow_bbox": [
+            840,
+            178,
+            870,
+            222
+          ],
+          "center": [
+            820,
+            200
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.854,
+      "lon": 76.278,
+      "depth_m": 18.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-009",
+      "filename": "IMG-009_strong_shadow.png",
+      "filepath": "data\\demo\\IMG-009_strong_shadow.png",
+      "scenario_type": "strong_shadow",
+      "description": "Object with very strong acoustic shadow \u2014 ideal for shadow analysis",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "metal_debris",
+          "bbox": [
+            560,
+            216,
+            640,
+            296
+          ],
+          "shadow_bbox": [
+            640,
+            181,
+            780,
+            331
+          ],
+          "center": [
+            600,
+            256
+          ],
+          "shape": "rect"
+        }
+      ],
+      "lat": 10.8545,
+      "lon": 76.279,
+      "depth_m": 19.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-010",
+      "filename": "IMG-010_tracking_a.png",
+      "filepath": "data\\demo\\IMG-010_tracking_a.png",
+      "scenario_type": "tracking_sequence",
+      "description": "Tracking sequence frame 2/3",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "fishing_net",
+          "bbox": [
+            587,
+            222,
+            641,
+            288
+          ],
+          "shadow_bbox": [
+            650,
+            215,
+            715,
+            297
+          ],
+          "center": [
+            615,
+            256
+          ],
+          "shape": "net"
+        }
+      ],
+      "lat": 10.855,
+      "lon": 76.28,
+      "depth_m": 19.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-011",
+      "filename": "IMG-011_tracking_b.png",
+      "filepath": "data\\demo\\IMG-011_tracking_b.png",
+      "scenario_type": "tracking_sequence",
+      "description": "Tracking sequence frame 3/3",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "fishing_net",
+          "bbox": [
+            598,
+            228,
+            657,
+            283
+          ],
+          "shadow_bbox": [
+            665,
+            215,
+            730,
+            297
+          ],
+          "center": [
+            630,
+            256
+          ],
+          "shape": "net"
+        }
+      ],
+      "lat": 10.8555,
+      "lon": 76.281,
+      "depth_m": 20.0,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    },
+    {
+      "image_id": "IMG-012",
+      "filename": "IMG-012_tracking_c.png",
+      "filepath": "data\\demo\\IMG-012_tracking_c.png",
+      "scenario_type": "tracking_sequence",
+      "description": "Tracking sequence frame 1/3",
+      "image_quality": "GOOD",
+      "annotations": [
+        {
+          "label": "fishing_net",
+          "bbox": [
+            573,
+            222,
+            625,
+            283
+          ],
+          "shadow_bbox": [
+            635,
+            215,
+            700,
+            297
+          ],
+          "center": [
+            600,
+            256
+          ],
+          "shape": "net"
+        }
+      ],
+      "lat": 10.856,
+      "lon": 76.282,
+      "depth_m": 20.5,
+      "data_label": "SYNTHETIC_DEMO",
+      "coordinates_label": "DEMO / SIMULATED LOCATION"
+    }
+  ],
+  "total_images": 12
+}

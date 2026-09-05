@@ -1,0 +1,37 @@
+# Risk / Severity Configuration
+# DISCLAIMER: Risk scores are prototype heuristics, NOT scientifically validated environmental assessments.
+
+severity_levels:
+  - HIGH
+  - MEDIUM
+  - LOW
+  - UNKNOWN
+
+rules:
+  # High-risk classes (regardless of size)
+  high_risk_classes:
+    - fishing_net       # Entanglement hazard
+    - shipwreck         # Navigation hazard, potential pollution
+    - container         # Navigation hazard
+    - pipe_cable        # Infrastructure hazard
+
+  # Medium risk classes
+  medium_risk_classes:
+    - metal_debris
+    - tire
+    - plastic_debris
+
+  # Low risk
+  low_risk_classes:
+    - bottle_object
+    - other_debris
+
+  # Unknown anomalies are always flagged for review
+  anomaly_default_severity: MEDIUM
+
+  # Boost severity if evidence score is high
+  high_confidence_boost: true
+  high_confidence_threshold: 0.80
+
+  # Boost if size estimate is large
+  large_object_threshold_px: 5000  # area in pixels

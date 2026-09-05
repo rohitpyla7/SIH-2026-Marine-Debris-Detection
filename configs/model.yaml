@@ -1,0 +1,39 @@
+# Model Configuration — SIH26057
+
+detection:
+  model_type: "yolov8"
+  model_path: "models/detection/yolov8_sonar.pt"
+  demo_model_path: null  # Uses demo inference when null or file missing
+  confidence_threshold: 0.25
+  iou_threshold: 0.45
+  image_size: 640
+  device: "auto"  # auto | cpu | cuda | cuda:0
+
+  classes:
+    - fishing_net
+    - plastic_debris
+    - metal_debris
+    - tire
+    - container
+    - bottle_object
+    - pipe_cable
+    - shipwreck
+    - other_debris
+    - unknown_anomaly
+
+anomaly:
+  model_type: "autoencoder"  # autoencoder | isolation_forest | combined
+  model_path: "models/anomaly/autoencoder.pt"
+  threshold: 0.65
+  patch_size: 64
+  feature_dim: 128
+
+tracking:
+  enabled: true
+  method: "iou"  # iou | centroid | kalman
+  iou_threshold: 0.3
+  max_frames_lost: 5
+
+versioning:
+  current_detection_version: "demo-v0.1"
+  current_anomaly_version: "demo-v0.1"

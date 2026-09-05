@@ -1,0 +1,41 @@
+# SIH26057 — Requirements
+# Install: pip install -r requirements.txt
+
+# ── Core AI/ML ────────────────────────────────────────────────────────────────
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0          # YOLOv8-Nano
+
+# ── Computer Vision ───────────────────────────────────────────────────────────
+opencv-python>=4.8.0        # Image processing, CLAHE, denoising
+Pillow>=10.0.0              # Image I/O
+
+# ── Data Science ─────────────────────────────────────────────────────────────
+numpy>=1.24.0
+pandas>=2.0.0
+scipy>=1.10.0
+
+# ── Visualization ─────────────────────────────────────────────────────────────
+plotly>=5.15.0
+matplotlib>=3.7.0
+
+# ── Streamlit Dashboard ───────────────────────────────────────────────────────
+streamlit>=1.28.0
+streamlit-folium>=0.15.0
+folium>=0.14.0
+
+# ── Reports ───────────────────────────────────────────────────────────────────
+reportlab>=4.0.0            # PDF generation
+
+# ── Database ──────────────────────────────────────────────────────────────────
+sqlalchemy>=2.0.0
+
+# ── YAML ─────────────────────────────────────────────────────────────────────
+PyYAML>=6.0
+
+# ── Optional: BM3D denoising (falls back to NLM if not installed) ────────────
+# bm3d>=4.0.0
+# Install with: pip install bm3d
+
+# ── Development / Testing ────────────────────────────────────────────────────
+pytest>=7.0.0
