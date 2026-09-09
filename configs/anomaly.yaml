@@ -7,7 +7,7 @@ autoencoder:
   encoder_channels: [16, 32, 64]
   learning_rate: 0.001
   batch_size: 32
-  epochs: 50
+  epochs: 5
   reconstruction_threshold: 0.65  # Error above this = anomaly
 
 isolation_forest:
@@ -35,3 +35,4 @@ score_description: >
   Anomaly score [0.0 - 1.0]. Higher = more anomalous.
   In DEMO MODE this is computed from image statistics, NOT a trained model.
   A trained autoencoder model should replace this for production.
+

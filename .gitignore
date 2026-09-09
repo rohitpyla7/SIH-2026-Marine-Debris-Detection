@@ -61,3 +61,17 @@ results/predictions/
 results/*.png
 results/*.pdf
 reports/*.pdf
+
+# Large local datasets
+data/SubPipeMini2.zip
+data/SubPipeMini2/
+data/anomaly_ae/
+data/subpipe_full_yolo/
+data/subpipe_hf_yolo/
+
+# Generated evaluation artifacts
+reports/final_evaluation/
+
+# Temporary development files
+ai/detection/sonar_detector_replacement.txt
+services/pipeline_service_backup.py
